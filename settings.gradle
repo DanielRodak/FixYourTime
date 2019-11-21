@@ -1,2 +1,2 @@
 rootProject.name='Fix Your Time'
-include ':app'
+include ':app', ':buildSrc'
