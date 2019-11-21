@@ -5,12 +5,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion Versions.compile_sdk_version
-    buildToolsVersion Versions.build_tools_version
+    compileSdkVersion Versions.Android.compile_sdk_version
+    buildToolsVersion Versions.Android.build_tools_version
     defaultConfig {
         applicationId "com.rodak.fixyourtime"
-        minSdkVersion Versions.min_sdk_version
-        targetSdkVersion Versions.target_sdk_version
+        minSdkVersion Versions.Android.min_sdk_version
+        targetSdkVersion Versions.Android.target_sdk_version
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -26,15 +26,15 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation Dependencies.kotlin_stdlib
-    implementation Dependencies.androidx_appcompat
-    implementation Dependencies.androidx_core_ktx
-    implementation Dependencies.constraint_layout
-    testImplementation Dependencies.junit
-    androidTestImplementation Dependencies.androidx_junit
-    androidTestImplementation Dependencies.androidx_espresso
+    implementation Dependencies.App.kotlin_stdlib
+    implementation Dependencies.App.androidx_appcompat
+    implementation Dependencies.App.androidx_core_ktx
+    implementation Dependencies.App.constraint_layout
+    testImplementation Dependencies.JUnit.junit
+    androidTestImplementation Dependencies.Instrumentation.androidx_junit
+    androidTestImplementation Dependencies.Instrumentation.androidx_espresso
 
-    implementation Dependencies.rxJava2
-    implementation Dependencies.rxJava2Android
-    implementation Dependencies.rxBinding
+    implementation Dependencies.RxJava.rxJava2
+    implementation Dependencies.RxJava.rxJava2Android
+    implementation Dependencies.RxJava.rxBinding
 }
