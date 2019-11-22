@@ -1,14 +1,11 @@
-apply plugin: 'com.android.application'
-
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion AndroidVersions.compile_sdk_version
     buildToolsVersion AndroidVersions.build_tools_version
     defaultConfig {
-        applicationId "com.rodak.fixyourtime"
         minSdkVersion AndroidVersions.min_sdk_version
         targetSdkVersion AndroidVersions.target_sdk_version
         versionCode 1
@@ -25,7 +22,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':mvi')
     implementation AppDependencies.kotlin_stdlib
     implementation AppDependencies.androidx_appcompat
     implementation AppDependencies.androidx_core_ktx
@@ -33,8 +29,4 @@ dependencies {
     testImplementation JUnitDependencies.junit
     androidTestImplementation InstrumentationDependencies.androidx_junit
     androidTestImplementation InstrumentationDependencies.androidx_espresso
-
-    implementation RxJavaDependencies.rxJava2
-    implementation RxJavaDependencies.rxJava2Android
-    implementation RxJavaDependencies.rxBinding
 }

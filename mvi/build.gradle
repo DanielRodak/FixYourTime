@@ -1,0 +1,7 @@
+apply from: "$rootProject.projectDir/shared-deps.gradle"
+
+dependencies {
+    implementation RxJavaDependencies.rxJava2
+    implementation RxJavaDependencies.rxJava2Android
+    implementation RxJavaDependencies.rxBinding
+}

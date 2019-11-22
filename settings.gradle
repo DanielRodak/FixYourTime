@@ -1,2 +1,3 @@
 rootProject.name='Fix Your Time'
 include ':app', ':buildSrc'
+include ':mvi'
